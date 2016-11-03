@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+    <style>
+        .slide pre code::before {
+            position: absolute;
+            margin-left: -2em;
+            color: #bdbdbd;
+            counter-increment: code;
+            content: counter(code,decimal-leading-zero) ".";
+        }
+        iframe{
+            width: 100%;
+            height: 440px;
+        }
+        .html{
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            background-size: 80%;
+        }
+        .slide pre{
+            background: #fff;
+            position: absolute;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            padding-left: 60px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="shower list">
+<header class="caption">
+    <h1>Изоморфный React</h1>
+    <p>Ковалев Кирилл</p>
+</header>
+<section class="slide" id="cover">
+    <div class="flex">
+        <img src="pictures/me.jpg">
+        <div class="info">
+            <h2>Ковалев Кирилл</h2>
+            <ul>
+                <li>
+                    <a href="https://habrahabr.ru/users/seokirill/">https://habrahabr.ru/users/seokirill/</a>
+                </li>
+                <li>
+                    ГК ФИЛАНКО
+                </li>
+                <li>
+                    LoftSchool
+                </li>
+                <li>
+                    <a href="http://devconf.ru/ru/offers/offer/193">DevConf</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <style>
+        #cover .flex{
+            display: flex;
+            align-items: flex-start;
+        }
+        #cover img{
+            flex-shrink: 0;
+            margin-right: 30px;
+        }
+        #cover ul{
+            padding-left: 30px;
+        }
+    </style>
+</section>
+
+
+<section class="slide" id="isomorph">
+    <h2>Изоморфный код</h2>
+    <blockquote>
+        Изоморфи́зм (от др.-греч. ἴσος — «равный, одинаковый, подобный» и μορφή — «форма»)
+    </blockquote>
+    <div class="flex">
+        <img src="pictures/browser.png">
+        <div>=</div>
+        <img src="pictures/server.png">
+        <img src="pictures/phone.png" class="next">
+    </div>
+    <style>
+        #isomorph blockquote:before{
+            content: none;
+        }
+        #isomorph blockquote{
+            border-left: 5px solid #c00;
+            padding-left: 30px;
+        }
+        #isomorph .flex{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 70px;
+        }
+        #isomorph .flex img{
+            max-height: 200px;
+        }
+        #isomorph .flex div{
+            font-size: 100px;
+        }
+        #isomorph .flex .next{
+            position: absolute;
+            right: 0;
+            background: #fff;
+            max-height: none;
+            height: 235px;
+        }
+    </style>
+</section>
+
+
+<section class="slide" id="alot">
+    <h2>Разработка в двух направлениях занимает много времени</h2>
+
+    <style>
+        #alot{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</section>
+
+
+<section class="slide" id="branches">
+    <img src="pictures/branches.png">
+    
+    <style>
+        #branches{
+            display: flex;
+            align-items: center;
+        }
+        #branches img{
+            width: 100%;
+        }
+    </style>
+</section>
+
+<section class="slide" id="mobile">
+    <h2>Mobile</h2>
+
+    <ul>
+        <li>
+            Layout-элементы
+        </li>
+        <li>
+            AsyncStorage
+            <img src="pictures/asyncstorage.png" class="next as">
+        </li>
+        <li>
+            ReactWorker
+            <img src="pictures/rw.png" class="next rw">
+        </li>
+    </ul>
+
+    <style>
+        #mobile{
+
+        }
+        #mobile .as,
+        #mobile .rw{
+            position: absolute;
+            right: 0;
+            width: 700px;
+            top: 100px;
+        }
+    </style>
+</section>
+
+<section class="slide" id="mobile-minus">
+    <h2>Минусы подхода</h2>
+
+    <ul>
+         <li>
+             Ограничения
+         </li>
+        <li>
+            Найм мобильных разработчиков
+        </li>
+    </ul>
+    <style>
+
+    </style>
+</section>
+
+<section class="slide" id="web">
+    <h2>Web</h2>
+
+    <ul>
+        <li>
+            HTML-элементы
+            <img src="pictures/native-html.png" class="next html">
+        </li>
+        <li>
+            LocalStorage
+        </li>
+        <li>
+            Window, document
+        </li>
+    </ul>
+
+    <style>
+        #web .html{
+            position: absolute;
+            right: 0;
+            width: 700px;
+            top: 100px;
+        }
+    </style>
+</section>
+
+
+
+<!--<section class="slide" id="some">-->
+    <!--<h2>2356</h2>-->
+
+    <!--<style>-->
+
+    <!--</style>-->
+<!--</section>-->
+
+
+
+
+
+
+
+
+
+
+<section class="slide" id="q">
+    <h2>
+        Вопросы?
+    </h2>
+    <style>
+        #q{
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</section>
+
+<div class="progress"></div>
+<script src="shower/shower.min.js"></script>
+</body>
+</html>
