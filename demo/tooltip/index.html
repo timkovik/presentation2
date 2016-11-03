@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <title>Tooltip</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <style>
+        button{
+            font-size: 40px;
+        }
+        [data-tooltip]{
+            position: relative;
+        }
+        [data-tooltip]:before{
+            content: attr(data-tooltip);
+            position: absolute;
+            font-size: 20px;
+            background: #FCFFAA;
+            top: 0;
+            left: 50%;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid;
+            color: #000;
+            transition: transform .3s, opacity .3s;
+            transform: translate(-50%,calc(-100% - 10px))scale(0);
+            line-height: 1em;
+            pointer-events: none;
+            transform-origin: 50% calc(100% + 10px);
+            opacity: .6;
+        }
+        [data-tooltip]:hover:before{
+            transform: translate(-50%,calc(-100% - 10px))scale(1);
+        }
+        [data-tooltip]:after{
+            content: '';
+            border: 10px solid transparent;
+            height: 0;
+            width: 0;
+            display: block;
+            position: absolute;
+            top: 0;
+            border-top-color: #000;
+            left: 50%;
+            transform: translate(-50%, -11px)scale(0);
+            transition: transform .3s;
+            opacity: .6;
+        }
+        [data-tooltip]:hover:after{
+            transform: translate(-50%, -11px)scale(1);
+        }
+    </style>
+
+    <style>
+        [data-tooltip]{
+            position: relative;
+        }
+        [data-tooltip]:before{
+            content: attr(data-tooltip);
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transition: transform .3s, opacity .3s;
+            transform: translate(-50%,calc(-100% - 10px))scale(0);
+            transform-origin: 50% calc(100% + 10px);
+            will-change: transform;
+        }
+        [data-tooltip]:hover:before{
+            transform: translate(-50%,calc(-100% - 10px))scale(1);
+        }
+    </style>
+
+    <button data-tooltip="Текст с подсказкой">Кнопка</button>
+
+</body>
+</html>

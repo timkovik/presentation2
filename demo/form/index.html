@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<form>
+    <fieldset>
+        <fieldset>
+            <input type="text" required placeholder="Фамилия">
+            <input type="text" required placeholder="Имя">
+            <input type="text" required placeholder="Отчество">
+        </fieldset>
+        <label class="next">
+            <input type="checkbox" required>
+            Далее
+        </label>
+    </fieldset>
+    <fieldset>
+        <fieldset>
+            <input type="email" required placeholder="e-mail">
+            <input type="tel" required placeholder="Телефон" pattern="[0-9]{10,}">
+        </fieldset>
+        <label class="next">
+            <input type="checkbox" required>
+            Далее
+        </label>
+    </fieldset>
+    <fieldset>
+        <fieldset>
+            <textarea required placeholder="Сообщение"></textarea>
+            <label>
+                <input type="checkbox" required>
+                <span>
+                  Согласен с офертой
+                </span>
+            </label>
+        </fieldset>
+        <label class="next">
+            <input type="checkbox" required>
+            Далее
+        </label>
+    </fieldset>
+    <fieldset>
+        <button>Отправить</button>
+    </fieldset>
+</form>
+
+<style>
+    .next input{
+        display: none;
+    }
+    form > *{
+        top: 0;
+    }
+    form > *:not(:first-child),
+    fieldset:valid{
+        position: absolute;
+        transform: translateY(-100%);
+    }
+    fieldset:valid + *:not(:valid),
+    fieldset:valid + *:last-child {
+        position: relative;
+        transform: translateY(0);
+    }
+
+    .next{
+        opacity:0;
+    }
+    :valid + .next{
+        opacity: 1;
+    }
+</style>
+
+<style>
+    body {
+        align-items: flex-start;
+    }
+    .next{
+        background: #50504f;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    .next:after{
+        content: '>';
+    }
+    .next{
+        transition: opacity .3s;
+    }
+    form fieldset > fieldset{
+        position: relative !important;
+        transform: none !important;
+        border: 0;
+    }
+</style>
+</body>
+</html>

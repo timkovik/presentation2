@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <title>Slider:target</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+
+<div id="slider">
+    <div class="item" id="slide1">
+        <a href="#slide3" class="prev"></a>
+        <img src="http://greenword.ru/images/2015/10/2015-10-26-18-17-47.jpg">
+        <a href="#slide2" class="next"></a>
+    </div>
+    <div class="item" id="slide2">
+        <a href="slide1" class="prev"></a>
+        <img src="http://img.funtema.ru/09102015/kayak/7.jpg">
+        <a href="#slide3" class="next"></a>
+    </div>
+    <div class="item" id="slide3">
+        <a href="#slide2" class="prev"></a>
+        <img src="http://greenword.ru/images/2015/10/2015-10-26-18-17-07.jpg">
+        <a href="#slide1" class="next"></a>
+    </div>
+</div>
+
+<style>
+    #slider .item{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #slider .item{
+        z-index: 0;
+    }
+    #slider :target{
+        z-index: 1;
+    }
+</style>
+
+<!--
+    https://dizzyzane.github.io/carousel-css/
+-->
+</body>
+</html>

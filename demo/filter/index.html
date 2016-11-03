@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+    <title>Filter</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <div id="filter">
+        <input type="checkbox" id="new" checked>
+        <label for="new">Новые</label>
+        <input type="checkbox" id="sale" checked>
+        <label for="sale">Акционные</label>
+        <input type="checkbox" id="bestseller" checked>
+        <label for="bestseller">Популярные</label>
+
+        <div class="items">
+            <div class="item new">
+                <div class="title">Apple iPhone 5S 16Gb</div>
+                <img src="../../pictures/tel1.jpg">
+                <div class="price">20 190 руб.</div>
+            </div>
+            <div class="item sale">
+                <div class="title">Apple iPhone 6S 64Gb</div>
+                <img src="../../pictures/tel2.jpg">
+                <div class="price">46 940 руб.</div>
+            </div>
+            <div class="item bestseller">
+                <div class="title">Apple iPhone 5S 16Gb</div>
+                <img src="../../pictures/tel3.jpeg">
+                <div class="price">20 190 руб.</div>
+            </div>
+            <div class="item bestseller">
+                <div class="title">Samsung Galaxy S7 32Gb</div>
+                <img src="../../pictures/tel2.jpg">
+                <div class="price">38 000 руб.</div>
+            </div>
+            <div class="item sale">
+                <div class="title">Samsung Galaxy S7 Edge 32Gb</div>
+                <img src="../../pictures/tel1.jpg">
+                <div class="price">45 740 руб.</div>
+            </div>
+        </div>
+    </div>
+
+
+
+<style>
+    #filter .item{
+        display: none;
+    }
+    #bestseller:checked ~ .items > .bestseller{
+        display: flex;
+        counter-increment: visibleitems;
+    }
+
+    #filter .items:before{
+        content: 'Ничего нету ):';
+    }
+    #filter :checked ~ .items:before{
+        content: none;
+    }
+
+
+    #filter .items:after {
+        content: 'Всего: ' counter(visibleitems);
+    }
+
+
+
+
+    #new:checked ~ .items > .new{
+        display: flex;
+        counter-increment: visibleitems;
+    }
+    #sale:checked ~ .items > .sale{
+        display: flex;
+        counter-increment: visibleitems;
+    }
+    #filter .items:before{
+        text-align: center;
+        background: #dadada;
+        line-height: 2em;
+        border-radius: 2px;
+        font-size: 50px;
+        width: 100%;
+    }
+</style>
+
+<style>
+    body {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    #filter label{
+        font-size: 40px;
+    }
+    #filter label:before{
+        font-size: 14px;
+        transform: scale(2);
+    }
+    #filter .items:after {
+        flex-basis: 100%;
+        font-size: 50px;
+        margin-bottom: 20px;
+        background: #dadada;
+        padding: 5px;
+        border-radius: 2px;
+        order: -1;
+    }
+</style>
+</body>
+</html>
