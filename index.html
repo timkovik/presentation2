@@ -52,16 +52,19 @@
             <h2>Ковалев Кирилл</h2>
             <ul>
                 <li>
-                    <a href="https://habrahabr.ru/users/seokirill/">https://habrahabr.ru/users/seokirill/</a>
+                    Тружусь: БанкСофтСистемс
                 </li>
                 <li>
-                    ГК ФИЛАНКО
+                    Преподаю: LoftSchool
                 </li>
                 <li>
-                    LoftSchool
+                    <a href="https://habrahabr.ru/users/seokirill/">Habr</a>
                 </li>
                 <li>
-                    <a href="http://devconf.ru/ru/offers/offer/193">DevConf</a>
+                    <a href="https://github.com/seokirill">Github</a>
+                </li>
+                <li>
+                    Докладывал: <a href="http://devconf.ru/ru/offers/offer/193" target="_blank">DevConf</a>, <a href="https://vk.com/piterjs?w=wall-92250781_14" target="_blank">PiterJS</a>
                 </li>
             </ul>
         </div>
@@ -86,13 +89,12 @@
 <section class="slide" id="isomorph">
     <h2>Изоморфный код</h2>
     <blockquote>
-        Изоморфи́зм (от др.-греч. ἴσος — «равный, одинаковый, подобный» и μορφή — «форма»)
+        Изоморфный код - код, который одинаково работает в разных средах.
     </blockquote>
     <div class="flex">
         <img src="pictures/browser.png">
         <div>=</div>
         <img src="pictures/server.png">
-        <img src="pictures/phone.png" class="next">
     </div>
     <style>
         #isomorph blockquote:before{
@@ -115,146 +117,325 @@
         #isomorph .flex div{
             font-size: 100px;
         }
-        #isomorph .flex .next{
-            position: absolute;
-            right: 0;
-            background: #fff;
-            max-height: none;
-            height: 235px;
-        }
     </style>
 </section>
 
 
-<section class="slide" id="alot">
-    <h2>Разработка в двух направлениях занимает много времени</h2>
-
+<section class="slide" id="isomorph2">
+    <h2>Изоморфный код</h2>
+    <blockquote>
+        Изоморфный код - код, который одинаково работает в разных средах.
+    </blockquote>
+    <div class="flex">
+        <img src="pictures/browser-react.png">
+        <div>=</div>
+        <img src="pictures/phone-react.png">
+    </div>
     <style>
-        #alot{
+        .slide blockquote:before{
+            content: none;
+        }
+        blockquote{
+            border-left: 5px solid #c00;
+            padding-left: 30px;
+        }
+        #isomorph2 .flex{
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 70px;
+        }
+        #isomorph2 .flex img{
+            max-height: 200px;
+        }
+        #isomorph2 .flex div{
+            font-size: 100px;
         }
     </style>
 </section>
 
-
-<section class="slide" id="branches">
-    <img src="pictures/branches.png">
-    
-    <style>
-        #branches{
-            display: flex;
-            align-items: center;
-        }
-        #branches img{
-            width: 100%;
-        }
-    </style>
-</section>
-
-<section class="slide" id="mobile">
-    <h2>Mobile</h2>
-
+<section class="slide" id="why">
+    <h2>Зачем это нужно</h2>
     <ul>
         <li>
-            Layout-элементы
+            Уменьшение времени на разработку мобильных приложений
         </li>
         <li>
-            AsyncStorage
-            <img src="pictures/asyncstorage.png" class="next as">
-        </li>
-        <li>
-            ReactWorker
-            <img src="pictures/rw.png" class="next rw">
+            Реиспользование кода
         </li>
     </ul>
 
     <style>
-        #mobile{
+        #why{
 
-        }
-        #mobile .as,
-        #mobile .rw{
-            position: absolute;
-            right: 0;
-            width: 700px;
-            top: 100px;
         }
     </style>
 </section>
 
-<section class="slide" id="mobile-minus">
-    <h2>Минусы подхода</h2>
+<section class="slide" id="branches">
+    <h2>Две ветки</h2>
+
+    <img src="pictures/branches.png">
+    <span class="react">React</span>
+    <span class="react native">ReactNative</span>
+
+    <style>
+        #branches img{
+            height: 300px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 290px;
+        }
+        #branches .react{
+            position: absolute;
+            top: 250px;
+            font-size: 70px;
+            left: calc(50% - 300px);
+        }
+        #branches .react.native{
+            top: 300px;
+            left: calc(50% + 120px);
+        }
+    </style>
+</section>
+
+<section class="slide" id="merge">
+    <h2>Берем лучшее</h2>
+
+    <div class="center">
+        <img src="pictures/merge.png" alt="">
+    </div>
+
+    <style>
+        #merge .center{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 440px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+        }
+        #merge img{
+            max-width: 100%;
+        }
+    </style>
+</section>
+
+<section class="slide" id="layouts">
+    <h2>Layouts на практике</h2>
 
     <ul>
          <li>
-             Ограничения
+             Самое простое - создать компоненты html-нод.
          </li>
+    </ul>
+    <ul class="red next">
         <li>
-            Найм мобильных разработчиков
+            Текст должен находиться в элементе &lt;Text/&gt;
         </li>
     </ul>
-    <style>
-
-    </style>
-</section>
-
-<section class="slide" id="web">
-    <h2>Web</h2>
-
-    <ul>
+    <ul class="next">
         <li>
-            HTML-элементы
-            <img src="pictures/native-html.png" class="next html">
+            Имплементировать недостающие CSS свойства
         </li>
+    </ul>
+    <ul class="red next">
         <li>
-            LocalStorage
-        </li>
-        <li>
-            Window, document
+            Невозможность использования многих html5-фич
         </li>
     </ul>
 
+
     <style>
-        #web .html{
-            position: absolute;
-            right: 0;
-            width: 700px;
-            top: 100px;
+        ul.red li{
+            text-indent: 1em;
+            border-left: 4px solid #cc0000;
+            margin-bottom: 2px;
+        }
+        ul.red li:before{
+            content: none;
         }
     </style>
 </section>
 
 
 
-<!--<section class="slide" id="some">-->
-    <!--<h2>2356</h2>-->
 
-    <!--<style>-->
+<section class="slide" id="storage">
+    <h2>AsyncStorage</h2>
 
-    <!--</style>-->
-<!--</section>-->
+    <ul>
+        <li>
+            Единый интерфейс
+        </li>
+    </ul>
+
+    <div class="flex next">
+        <ul class="red">
+            <li>
+                localStorage
+            </li>
+            <li>
+                WebSQL
+            </li>
+            <li>
+                IndexedDB
+            </li>
+        </ul>
+        <ul class="green">
+            <li>
+                AsyncStorage
+            </li>
+        </ul>
+    </div>
+    <ul class="next">
+        <li>
+            Асинхронность
+        </li>
+    </ul>
+
+    <style>
+        ul.green li{
+            text-indent: 1em;
+            border-left: 4px solid darkgreen;
+            margin-bottom: 2px;
+        }
+        ul.green li:before{
+            content: none;
+        }
+        #storage .flex{
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+        }
+        #storage .flex > :first-child{
+            margin-right: 50px;
+        }
+    </style>
+</section>
+
+<section class="slide" id="threads">
+    <h2>UI thread</h2>
+
+    <ul>
+        <li>
+            Как работает ReactNative?
+        </li>
+    </ul>
+    <ul class="green next">
+        <li>
+            UI в отдельном потоке
+        </li>
+        <li class="next">
+            <a href="https://github.com/web-perf/react-worker-dom" target="_blank">React-worker-dom</a>
+        </li>
+    </ul>
+
+    <ul class="next">
+        <li>
+            Что еще вынести в отдельный поток?
+        </li>
+    </ul>
+    <ul class="green next">
+        <li>
+            Функции-редюсеры
+        </li>
+        <li class="next">
+            <a href="https://github.com/seokirill/redux-webworker-middleware" target="_blank">Redux-webworker-middleware</a>
+        </li>
+    </ul>
 
 
+    <style>
+
+    </style>
+</section>
+
+<section class="slide" id="troublemakers">
+    <h2>Мы сами создаем себе препятствия</h2>
+
+    <blockquote>
+        Теперь у нас новая проблема - имплементировать воркеры в ReactNative
+    </blockquote>
 
 
+    <style>
+        #troublemakers blockquote{
+            font-size: 40px;
+        }
+    </style>
+</section>
 
+<section class="slide" id="final">
+    <div class="flex">
+        <img src="pictures/me.jpg">
+        <div class="info">
+            <h2>Ковалев Кирилл</h2>
+            <ul>
+                <li>
+                    <a href="https://habrahabr.ru/users/seokirill/">Habr</a>
+                </li>
+                <li>
+                    <a href="https://github.com/seokirill">Github</a>
+                </li>
+                <li>
+                    Email: seokirillstarsnab@gmail.com
+                </li>
+            </ul>
+        </div>
+    </div>
 
+    <div class="linkwrap">
+        <a class="link" href="http://bit.ly/2g8RhMg" target="_blank">
+            http://bit.ly/2g8RhMg
+        </a>
+    </div>
 
-
+    <style>
+        #final .flex{
+            display: flex;
+            align-items: flex-start;
+        }
+        #final img{
+            flex-shrink: 0;
+            margin-right: 30px;
+        }
+        #final ul{
+            padding-left: 30px;
+        }
+        #final .linkwrap{
+            display: flex;
+            justify-content: center;
+        }
+        #final .link{
+            font-size: 70px;
+        }
+    </style>
+</section>
 
 
 <section class="slide" id="q">
-    <h2>
+
+    <blockquote>
         Вопросы?
-    </h2>
+    </blockquote>
+
+
     <style>
         #q{
             display: flex;
             align-items: center;
+            padding-top: 0;
+        }
+        #q blockquote{
+            font-size: 80px;
         }
     </style>
 </section>
+
 
 <div class="progress"></div>
 <script src="shower/shower.min.js"></script>
